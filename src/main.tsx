@@ -9,7 +9,7 @@ import { AlertProvider } from "./contexts/AlertContext";
 import { UpdatePrompt } from "./pwa/UpdatePrompt";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-const CURRENT_VERSION = import.meta.env.VITE_APP_VERSION ?? "dev";
+const CURRENT_VERSION = import.meta.env.PACKAGE_VERSION ?? "dev";
 
 if ("serviceWorker" in navigator) {
   const savedVersion = localStorage.getItem("app_version");

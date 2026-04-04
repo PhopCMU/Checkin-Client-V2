@@ -2,11 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
+import packageJson from "./package.json";
 
 export default defineConfig({
+  define: {
+    "import.meta.env.PACKAGE_VERSION": JSON.stringify(packageJson.version),
+  },
   // =========================
-  // 🔌 Plugins ที่ใช้ใน Vite
-  // =========================
+  // 🔌 Plugins ที่ใช้ใน Vite  // =========================
   plugins: [
     // React plugin (รองรับ JSX, Fast Refresh)
     react(),
