@@ -6,7 +6,7 @@ import packageJson from "./package.json";
 
 export default defineConfig({
   define: {
-    "import.meta.env.PACKAGE_VERSION": JSON.stringify(packageJson.version),
+    "import.meta.env.VITE_APP_VERSION": JSON.stringify(packageJson.version),
   },
   // =========================
   // 🔌 Plugins ที่ใช้ใน Vite  // =========================

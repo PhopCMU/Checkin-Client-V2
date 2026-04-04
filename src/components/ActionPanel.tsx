@@ -69,7 +69,7 @@ const getRecommendedShiftByTime = (): ShiftType => {
   const inNightWindow =
     totalMinutes >= NIGHT_AVAILABLE_START_MIN ||
     totalMinutes <= NIGHT_AVAILABLE_END_MIN;
-  if (inMorningWindow && inNightWindow) return "night"; // 17:00–23:59 -> เน้น night
+  if (inMorningWindow && inNightWindow) return "night"; // 16:30–23:59 -> เน้น night
   if (inMorningWindow) return "morning";
   if (inNightWindow) return "night";
   return "morning";
