@@ -1,0 +1,185 @@
+@import "leaflet/dist/leaflet.css";
+@import "tailwindcss";
+
+/* === Fix horizontal overflow === */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ป้องกัน container ยื่นเกิน */
+.max-w-3xl,
+.max-w-4xl,
+.max-w-6xl,
+.max-w-7xl,
+.container {
+  max-width: 100% !important;
+}
+
+.grid.grid-cols-7 {
+  width: 100%;
+}
+
+.grid.grid-cols-7 > * {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Responsive adjustments for ZoneDistances */
+@media (max-width: 640px) {
+  .zone-distances-mobile {
+    padding: 0.5rem;
+  }
+
+  .zone-progress-mobile {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .zone-distances-tablet {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .zone-distances-desktop {
+    padding: 1rem;
+  }
+}
+
+/* Custom scrollbar for horizontal scroll on mobile */
+@media (max-width: 640px) {
+  .zone-scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f3f4f6;
+  }
+
+  .zone-scroll-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .zone-scroll-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 2px;
+  }
+
+  .zone-scroll-container::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 2px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* ปรับปรุงการแสดงผลบนอุปกรณ์ขนาดเล็ก */
+@media (max-width: 640px) {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 640px) {
+  .calendar-day-button {
+    height: 2.5rem; /* แทนที่จะ 4rem (h-16) */
+  }
+}
+
+@keyframes loadingBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loadingBar {
+  animation: loadingBar 2s ease-in-out infinite;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
