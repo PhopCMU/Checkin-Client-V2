@@ -2,12 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
-import packageJson from "./package.json";
 
 export default defineConfig({
-  define: {
-    "import.meta.env.VITE_APP_VERSION": JSON.stringify(packageJson.version),
-  },
   // =========================
   // 🔌 Plugins ที่ใช้ใน Vite  // =========================
   plugins: [
@@ -34,8 +30,8 @@ export default defineConfig({
         "icons/maskable-512.png",
       ],
       // วิธี register Service Worker
-      // autoUpdate = เมื่อมีเวอร์ชันใหม่ จะอัปเดต SW ให้อัตโนมัติ
-      registerType: "autoUpdate",
+      // prompt = เมื่อมีเวอร์ชันใหม่ จะถามผู้ใช้ก่อนอัปเดต
+      registerType: "prompt",
       scope: "/", // ตัวอย่าง: https://vitejs.dev/
       // ตัวเลือกสำหรับตอน run `vite dev`
       devOptions: {
@@ -112,8 +108,9 @@ export default defineConfig({
       // 📦 Workbox (Service Worker Cache)
       // =========================
       workbox: {
-        skipWaiting: true, // ป้องกันการ update SW
-        clientsClaim: true, // ป้องกันการ update SW
+        skipWaiting: false, // รอให้ผู้ใช้กดยืนยันอัปเดต (prompt)
+        clientsClaim: true,
+ // ป้องกันการ update SW
 
         globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2}"],
         navigateFallback: "/index.html",
