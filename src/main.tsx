@@ -38,29 +38,16 @@ const checkSWUpdate = async () => {
 if ("serviceWorker" in navigator) {
   const savedVersion = localStorage.getItem("app_version");
 
-  // กรณีเป็นครั้งแรกที่เข้าแอป
+  // กรณีเป็นครั้งแรกที่เข้าแอป — ตั้งค่า version ครั้งแรกเท่านั้น
   if (!savedVersion) {
     localStorage.setItem("app_version", CURRENT_VERSION);
   }
-
-  // กรณี Local Storage ไม่ตรงกับ Code (แปลว่าเพิ่ง reload จากการอัปเดต)
-  if (savedVersion && savedVersion !== CURRENT_VERSION) {
-    localStorage.setItem("app_version", CURRENT_VERSION);
-    // ไม่ต้อง reload ซ้ำที่นี่แล้ว เพราะ code ใหม่กำลังรันอยู่
-  }
-
-  // ดักฟังเมื่อ Service Worker ตัวใหม่เข้าควบคุม (Skip Waiting แล้ว)
-  navigator.serviceWorker.addEventListener("controllerchange", () => {
-    const savedVersion = localStorage.getItem("app_version");
-    if (savedVersion !== CURRENT_VERSION) {
-      localStorage.setItem("app_version", CURRENT_VERSION);
-      window.location.reload();
-    }
-  });
+  // หมายเหตุ: เมื่อ savedVersion !== CURRENT_VERSION จะไม่อัปเดต localStorage ที่นี่
+  // version จะถูกอัปเดตเมื่อผู้ใช้กด "อัปเดตทันที" จาก UpdatePrompt เท่านั้น
 
   // ตรวจสอบการอัปเดตทันทีเมื่อเริ่มแอป และทุก 15 นาที
   checkSWUpdate();
-  setInterval(checkSWUpdate, 15 * 60 * 1000);
+  // setInterval(checkSWUpdate, 15 * 60 * 1000);
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -70,9 +57,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
           <UpdatePrompt />
           <Routes>
-            <Route path="sign-in" element={<SignIn />} />
+            <Route path="/sign-in" element={<SignIn />} />
             <Route
-              path=""
+              path="/"
               element={
                 <PrivateRoute>
                   <App />

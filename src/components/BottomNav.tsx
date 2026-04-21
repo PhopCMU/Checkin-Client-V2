@@ -21,13 +21,13 @@ const BottomNav: React.FC<Props> = ({
       {/* Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black/30 z-4999"
+          className="fixed inset-0 bg-black/30 z-[4999]"
           onClick={() => setMenuOpen(false)}
         />
       )}
 
       {/* Bottom Menu */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-linear-to-t from-white to-gray-50/80 backdrop-blur-sm border-t border-gray-200/80 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-5000">
+      <nav className="fixed bottom-0 left-0 right-0 bg-linear-to-t from-white to-gray-50/80 backdrop-blur-sm border-t border-gray-200/80 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-[5000]">
         <div className="max-w-xl mx-auto px-6 py-3 flex justify-between items-center">
           {/* History */}
           <button
