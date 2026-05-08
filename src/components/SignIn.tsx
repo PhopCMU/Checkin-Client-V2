@@ -35,6 +35,7 @@ const SignIn: React.FC = () => {
   const [info, setInfo] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+  const from = (location.state as any)?.from?.pathname ?? "/";
   const hasExchangedCode = React.useRef(false);
 
   const query = new URLSearchParams(location.search);
@@ -68,7 +69,7 @@ const SignIn: React.FC = () => {
 
   useEffect(() => {
     if (isAuthenticatedLocally()) {
-      navigate("/", { replace: true });
+      navigate(from, { replace: true });
       return;
     }
 
@@ -76,7 +77,7 @@ const SignIn: React.FC = () => {
       hasExchangedCode.current = true;
       exchangeCodeForSession(code);
     }
-  }, [code, navigate]);
+  }, [code, navigate, from]);
 
   const exchangeCodeForSession = async (authCode: string) => {
     setInfo("กำลังยืนยันการเข้าสู่ระบบ...");
@@ -115,7 +116,7 @@ const SignIn: React.FC = () => {
 
       saveToken(registerRes.accessToken);
       setInfo("ยืนยันการเข้าสู่ระบบสำเร็จ");
-      navigate("/", { replace: true });
+      navigate(from, { replace: true });
     } catch (err: any) {
       console.error("Authentication flow error:", err);
       removeToken();

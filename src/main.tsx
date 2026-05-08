@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./App";
 import SignIn from "./components/SignIn";
 import "./index.css";
@@ -66,6 +66,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 </PrivateRoute>
               }
             />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
       </AlertProvider>
