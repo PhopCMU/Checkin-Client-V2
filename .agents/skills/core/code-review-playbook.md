@@ -3,6 +3,10 @@
 ## When to use
 - Reviewing any PR in this project (feature, refactor, bugfix, deps)
 
+## Manual review policy
+- Only initiate code reviews when explicitly requested by the user in the chat (for example: "Please run a security review" or "Please review this PR"). Avoid automatic invocation for each change to conserve API tokens.
+- Run reviews after the author marks the work as complete, then verify that the review checklist covers the requested concerns and report any coverage gaps back to the user.
+
 ## Steps (fast path)
 1) Understand intent
 - Read PR title/description

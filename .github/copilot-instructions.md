@@ -8,6 +8,9 @@ Always:
 - If you fix a bug or learn a new pattern, append it to the relevant skill file under "Update notes".
 - Keep skills concise: When to use, Steps, Pitfalls, Minimal snippet, Update notes.
 - Maintain `.agents/skills/_index.json` entries for every skill file.
+- Maintain `.agents/skills/_index.json` entries for every skill file.
+ - Manual review policy: Only run security checks or code reviews when explicitly requested by the user in the prompt (for example: "Run security review" or "Review code"). Do not automatically trigger reviews on every change — this conserves API tokens and reduces noise. Perform reviews after the work is completed, then verify and report whether the review coverage matches the requested scope.
+- If tools (e.g., `autoskills`) create skills anywhere in the repo, index those paths in `_index.json` and add minimal glue skills under `.agents/skills/core/` instead of duplicating content.
 
 Architecture rules (src/\*\*):
 

@@ -3,6 +3,10 @@
 ## When to use
 - Any PR touching auth, storage, API calls, rendering remote content, exports, deps
 
+## Manual review policy
+- Only perform security reviews when explicitly requested by the user via the chat prompt (for example: "Run security review"). Do not auto-run security scans for every change to conserve API tokens.
+- After performing the review, confirm that the review covered the requested areas and note any follow-ups or uncovered gaps.
+
 ## Checklist
 - [ ] No secrets committed (keys, tokens, credentials)
 - [ ] No tokens/headers in logs
