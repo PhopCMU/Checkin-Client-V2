@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-05-08T18:18:07.211Z",
+  "cwd": "/Users/phop/Desktop/AI_PROJECT/Checkin-Client-V2",
+  "detected": [
+    "react",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "docker",
+    "pwa"
+  ],
+  "recommended": [
+    {
+      "id": "vercel-react-best-practices",
+      "reason": "Detected react"
+    },
+    {
+      "id": "vercel-composition-patterns",
+      "reason": "Detected react"
+    },
+    {
+      "id": "vite",
+      "reason": "Detected vite"
+    },
+    {
+      "id": "typescript-advanced-types",
+      "reason": "Detected typescript"
+    },
+    {
+      "id": "tailwind-css-patterns",
+      "reason": "Detected tailwindcss"
+    },
+    {
+      "id": "libs.tailwindcss",
+      "reason": "Detected tailwindcss"
+    },
+    {
+      "id": "core.security-dependencies",
+      "reason": "Detected docker"
+    },
+    {
+      "id": "frontend-design",
+      "reason": "Detected pwa"
+    }
+  ]
+}

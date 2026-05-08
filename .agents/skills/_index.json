@@ -228,6 +228,11 @@
       "id": "core.code-review-pr-template",
       "path": "./core/code-review-pr-template.md",
       "tags": ["review", "pr", "template"]
+    },
+    {
+      "id": "core.autodetect",
+      "path": "./core/autodetect/SKILL.md",
+      "tags": ["core", "autoskills"]
     }
   ]
 }
