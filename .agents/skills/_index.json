@@ -1,0 +1,238 @@
+{
+  "version": "2026-05-08",
+  "project": "Checkin-Client-V2",
+  "skills": [
+    {
+      "id": "accessibility",
+      "path": "./accessibility/SKILL.md",
+      "tags": ["autoskills", "accessibility"]
+    },
+    {
+      "id": "bun",
+      "path": "./bun/SKILL.md",
+      "tags": ["autoskills", "tooling"]
+    },
+    {
+      "id": "frontend-design",
+      "path": "./frontend-design/SKILL.md",
+      "tags": ["autoskills", "design"]
+    },
+    {
+      "id": "nodejs-backend-patterns",
+      "path": "./nodejs-backend-patterns/SKILL.md",
+      "tags": ["autoskills", "backend"]
+    },
+    {
+      "id": "nodejs-best-practices",
+      "path": "./nodejs-best-practices/SKILL.md",
+      "tags": ["autoskills", "backend"]
+    },
+    { "id": "seo", "path": "./seo/SKILL.md", "tags": ["autoskills", "seo"] },
+    {
+      "id": "tailwind-css-patterns",
+      "path": "./tailwind-css-patterns/SKILL.md",
+      "tags": ["autoskills", "css"]
+    },
+    {
+      "id": "typescript-advanced-types",
+      "path": "./typescript-advanced-types/SKILL.md",
+      "tags": ["autoskills", "typescript"]
+    },
+    {
+      "id": "vercel-composition-patterns",
+      "path": "./vercel-composition-patterns/SKILL.md",
+      "tags": ["autoskills", "architecture"]
+    },
+    {
+      "id": "vercel-react-best-practices",
+      "path": "./vercel-react-best-practices/SKILL.md",
+      "tags": ["autoskills", "react"]
+    },
+    {
+      "id": "vite",
+      "path": "./vite/SKILL.md",
+      "tags": ["autoskills", "build"]
+    },
+
+    {
+      "id": "core.project-conventions",
+      "path": "./core/project-conventions.md",
+      "tags": ["core"]
+    },
+    {
+      "id": "core.skill-authoring-rules",
+      "path": "./core/skill-authoring-rules.md",
+      "tags": ["core"]
+    },
+    {
+      "id": "core.skill-update-protocol",
+      "path": "./core/skill-update-protocol.md",
+      "tags": ["core"]
+    },
+    {
+      "id": "core.role-ui-tailwind",
+      "path": "./core/role-ui-tailwind.md",
+      "tags": ["core", "ui"]
+    },
+    {
+      "id": "core.role-data-api",
+      "path": "./core/role-data-api.md",
+      "tags": ["core", "api"]
+    },
+    {
+      "id": "core.role-routing",
+      "path": "./core/role-routing.md",
+      "tags": ["core", "routing"]
+    },
+    {
+      "id": "core.role-debug",
+      "path": "./core/role-debug.md",
+      "tags": ["core", "debug"]
+    },
+
+    {
+      "id": "libs.react-router-dom",
+      "path": "./libs/react-router-dom/SKILL.md",
+      "tags": ["libs", "routing"]
+    },
+    {
+      "id": "libs.leaflet",
+      "path": "./libs/leaflet/SKILL.md",
+      "tags": ["libs", "maps"]
+    },
+    {
+      "id": "libs.react-leaflet",
+      "path": "./libs/react-leaflet/SKILL.md",
+      "tags": ["libs", "maps"]
+    },
+    {
+      "id": "libs.lucide-react",
+      "path": "./libs/lucide-react/SKILL.md",
+      "tags": ["libs", "icons"]
+    },
+    {
+      "id": "libs.date-fns",
+      "path": "./libs/date-fns/SKILL.md",
+      "tags": ["libs", "date"]
+    },
+    {
+      "id": "libs.crypto-js",
+      "path": "./libs/crypto-js/SKILL.md",
+      "tags": ["libs", "crypto"]
+    },
+    {
+      "id": "libs.jspdf",
+      "path": "./libs/jspdf/SKILL.md",
+      "tags": ["libs", "pdf"]
+    },
+    {
+      "id": "libs.jspdf-autotable",
+      "path": "./libs/jspdf-autotable/SKILL.md",
+      "tags": ["libs", "pdf"]
+    },
+
+    {
+      "id": "libs.tailwindcss",
+      "path": "./libs/tailwindcss/SKILL.md",
+      "tags": ["libs", "css"]
+    },
+    {
+      "id": "libs.tailwindcss-vite",
+      "path": "./libs/tailwindcss-vite/SKILL.md",
+      "tags": ["libs", "build"]
+    },
+    {
+      "id": "libs.axios",
+      "path": "./libs/axios/SKILL.md",
+      "tags": ["libs", "http"]
+    },
+    {
+      "id": "libs.react-datepicker",
+      "path": "./libs/react-datepicker/SKILL.md",
+      "tags": ["libs", "ui"]
+    },
+    {
+      "id": "libs.chartjs",
+      "path": "./libs/chartjs/SKILL.md",
+      "tags": ["libs", "charts"]
+    },
+    {
+      "id": "libs.exceljs",
+      "path": "./libs/exceljs/SKILL.md",
+      "tags": ["libs", "excel"]
+    },
+    {
+      "id": "libs.xlsx",
+      "path": "./libs/xlsx/SKILL.md",
+      "tags": ["libs", "excel"]
+    },
+
+    {
+      "id": "core.security-baseline",
+      "path": "./core/security-baseline.md",
+      "tags": ["security", "baseline", "checklist"]
+    },
+    {
+      "id": "core.security-frontend-xss",
+      "path": "./core/security-frontend-xss.md",
+      "tags": ["security", "xss", "react"]
+    },
+    {
+      "id": "core.security-axios-auth",
+      "path": "./core/security-axios-auth.md",
+      "tags": ["security", "auth", "axios", "cookies", "storage", "csrf"]
+    },
+    {
+      "id": "core.security-crypto-js-usage",
+      "path": "./core/security-crypto-js-usage.md",
+      "tags": ["security", "crypto-js", "hashing"]
+    },
+    {
+      "id": "core.security-dependencies",
+      "path": "./core/security-dependencies.md",
+      "tags": ["security", "dependencies", "supply-chain", "npm", "xlsx"]
+    },
+
+    {
+      "id": "libs.security",
+      "path": "./libs/security.md",
+      "tags": ["security", "hub"]
+    },
+
+    {
+      "id": "core.code-review-playbook",
+      "path": "./core/code-review-playbook.md",
+      "tags": ["review", "playbook", "workflow"]
+    },
+    {
+      "id": "core.code-review-react-ts",
+      "path": "./core/code-review-react-ts.md",
+      "tags": ["review", "react", "typescript"]
+    },
+    {
+      "id": "core.code-review-security",
+      "path": "./core/code-review-security.md",
+      "tags": ["review", "security", "xss", "auth"]
+    },
+    {
+      "id": "core.code-review-performance",
+      "path": "./core/code-review-performance.md",
+      "tags": ["review", "performance"]
+    },
+    {
+      "id": "core.code-review-architecture-folders",
+      "path": "./core/code-review-architecture-folders.md",
+      "tags": ["review", "architecture", "folders"]
+    },
+    {
+      "id": "core.code-review-pr-template",
+      "path": "./core/code-review-pr-template.md",
+      "tags": ["review", "pr", "template"]
+    },
+    {
+      "id": "core.autodetect",
+      "path": "./core/autodetect/SKILL.md",
+      "tags": ["core", "autoskills"]
+    }
+  ]
+}
